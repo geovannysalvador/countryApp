@@ -9,14 +9,14 @@ import { Country } from '../../interfaces/country';
 })
 export class ByCapitalPageComponent {
 
-  public countries:Country[] = [];
+  public capital:Country[] = [];
 
   constructor( private countryServices:CountryService ){}
 
   searchByCapital(term:string):void{
     this.countryServices.searchCapytal(term)
-    .subscribe(countries =>{
-      this.countries = countries;
+    .subscribe(capital =>{
+      this.capital = capital;
     })
   }
 

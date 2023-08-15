@@ -19,6 +19,20 @@ export class CountryService {
     );
   }
 
+  searchCountry(termBusqueda:string):Observable<Country[]>{
+    return this.http.get<Country[]>(`${this.apiUrlBase}/name/${termBusqueda}`)
+    .pipe(
+      catchError( error => of([]))
+    );
+  }
+
+  searchRegion(termBusqueda:string):Observable<Country[]>{
+    return this.http.get<Country[]>(`${this.apiUrlBase}/region/${termBusqueda}`)
+    .pipe(
+      catchError( error => of([]))
+    );
+  }
+
 
 
 }

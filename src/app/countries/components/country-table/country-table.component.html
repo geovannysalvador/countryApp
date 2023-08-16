@@ -3,7 +3,7 @@
 </div>
 
 <ng-template #table>
-  <table class="table table-hover">
+  <table class="table table-info table-hover">
 
     <thead>
       <tr>
@@ -26,7 +26,7 @@
         <td>{{country.capital}}</td>
         <td>{{country.population | number }}</td>
         <td>
-          <a href="#">Ver</a>
+          <a [routerLink]="['/countries/by', country.cca3]">Ver</a>
         </td>
       </tr>
     </tbody>

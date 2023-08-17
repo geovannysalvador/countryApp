@@ -2,8 +2,10 @@
 type="text"
 [placeholder]="placeholder"
 class="form-control"
-(keyup.enter) = "emiteValue(txtInput.value)"
+(keyup)="onKeyPress(txtInput.value)"
 #txtInput
 >
 
-<hr class="opacity: 100;" >
+<hr class="opacity: 100" >
+
+<!-- (keyup.enter) = "emiteValue(txtInput.value)" -->
